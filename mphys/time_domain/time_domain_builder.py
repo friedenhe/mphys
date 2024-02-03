@@ -15,14 +15,14 @@ class TimeDomainBuilder(Builder):
 
     def get_time_derivative_variables(
         self, scenario_name=None
-    ) -> list[TimeDerivativeVariable]:
+    ):
         """
         The variables associated with this discipline that need backplanes of
         data for time derivatives
         """
         return []
 
-    def get_timestep_input_variables(self, scenario_name=None) -> list[TimeDomainInput]:
+    def get_timestep_input_variables(self, scenario_name=None):
         """
         The variables associated with this discipline that are inputs to the time step subsystems
         """

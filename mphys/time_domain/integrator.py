@@ -87,5 +87,5 @@ class Integrator(om.ExplicitComponent):
     def _get_timestep_group(self):
         pass
 
-    def _get_builder_list(self) -> list[TimeDomainBuilder]:
+    def _get_builder_list(self):
         return []

@@ -246,10 +246,10 @@ class ModalStructBuilder(TimeDomainBuilder):
 
     def get_time_derivative_variables(
         self, scenario_name=None
-    ) -> list[TimeDerivativeVariable]:
+    ):
         return [TimeDerivativeVariable("u_struct", 4, (self.nmodes))]
 
-    def get_timestep_input_variables(self, scenario_name=None) -> list[TimeDomainInput]:
+    def get_timestep_input_variables(self, scenario_name=None):
         return [
             TimeDomainInput("m", (self.nmodes)),
             TimeDomainInput("c", (self.nmodes)),

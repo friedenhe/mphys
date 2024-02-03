@@ -109,7 +109,7 @@ class FakeAeroBuilder(TimeDomainBuilder):
     def get_coupling_group_subsystem(self, scenario_name=None):
         return HarmonicForcer(number_of_nodes=self.nnodes)
 
-    def get_timestep_input_variables(self, scenario_name=None) -> list[TimeDomainInput]:
+    def get_timestep_input_variables(self, scenario_name=None):
         return [
             TimeDomainInput("amplitude_aero", (1)),
             TimeDomainInput("freq_aero", (1)),
