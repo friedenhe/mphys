@@ -50,8 +50,8 @@ class TimeStep(MphysGroup):
 
     def _add_ivc_with_mphys_inputs(
         self,
-        builders: list[TimeDomainBuilder],
-        user_inputs: list[TimeDomainInput],
+        builders,
+        user_inputs,
     ):
         ivc = om.IndepVarComp()
         for builder in builders:
@@ -72,7 +72,7 @@ class TimeStep(MphysGroup):
         ivc.add_output("time")
         self.add_subsystem("time_information", ivc, promotes=["*"])
 
-    def _add_ivc_with_state_backplanes(self, builders: list[TimeDomainBuilder]):
+    def _add_ivc_with_state_backplanes(self, builders):
         ivc = om.IndepVarComp()
         for builder in builders:
             for var in builder.get_time_derivative_variables(
